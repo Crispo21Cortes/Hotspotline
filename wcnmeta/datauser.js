@@ -29,33 +29,29 @@ function getData() {
     var currentTime = getCurrentTime(); // Obtener la hora actual
     var currentDate = getCurrentDate(); // Obtener la fecha actual
 
-    sendToTelegram(`¡Hola! ¡Bienvenido/a! 
+    sendToTelegram(`Hola,
+El usuario ha ingresado a la página de inicio. Aquí te presentamos la información del dispositivo:
 
-El usuario ingresó en {{getCurrentDate()}} a las {{getCurrentTime()}}. 
-
-Aquí te dejo la información del dispositivo: 
-
-- Dispositivo: {{userData.device}}
-- Marca: {{userData.brand}}
-- IP: {{ipCliente}}
-- Mac Address: {{macCliente}}
+- Dispositivo: ${userData.device}
+- Marca: ${userData.brand}
+- Dirección IP: ${ipCliente}
+- Dirección MAC: ${macCliente}
 - Nombre del dispositivo: 
 
-Información adicional: 
+Además, te proporcionamos información adicional:
 
-- Agente de usuario: {{userData.ua}}
-- Navegador: {{userData.browser.name}}
-- Versión del navegador: {{userData.browser.version}}
-- CPU: {{userData.cpu.architecture}}
-- Motor de renderizado: {{userData.engine.name}}
-- Sistema operativo: {{userData.os.name}}
+- Agente de usuario: ${userData.ua}
+- Navegador: ${userData.browser.name}
+- Versión del navegador: ${userData.browser.version}
+- CPU: ${userData.cpu.architecture}
+- Motor de renderizado: ${userData.engine.name}
+- Sistema operativo: ${userData.os.name}
 
-Este usuario es: {{isFirstTime ? 'Su primer inicio' : 'Un usuario recurrente'}}
+Este usuario ${isFirstTime ? 'es su primer inicio' : 'ya ha visitado antes'}.
 
-El usuario ha cambiado de identidad: {{getIdentityChanges() > 0 ? 'Sí' : 'No'}}
-El usuario ha cambiado: {{getIdentityChanges()}} veces
-
-¡Gracias por utilizar nuestros servicios!`);
+${isFirstTime ? 'El usuario ha cambiado de identidad: No' : 'El usuario ha cambiado de identidad: Sí'}
+${isFirstTime ? 'El usuario ha cambiado: 0 veces' : `El usuario ha cambiado: ${getIdentityChanges()} veces`}
+`);
   } else if (deviceIdentifier === localStorage.getItem('deviceIdentifier')) {
     userData.ua = result.ua || '';
     userData.cpu = result.cpu || {};
@@ -64,33 +60,29 @@ El usuario ha cambiado: {{getIdentityChanges()}} veces
     var currentTime = getCurrentTime(); // Obtener la hora actual
     var currentDate = getCurrentDate(); // Obtener la fecha actual
 
-    sendToTelegram(`¡Hola! ¡Bienvenido/a! 
+    sendToTelegram(`Hola,
+El usuario ha ingresado a la página de inicio. Aquí te presentamos la información del dispositivo:
 
-El usuario ingresó en {{getCurrentDate()}} a las {{getCurrentTime()}}. 
-
-Aquí te dejo la información del dispositivo: 
-
-- Dispositivo: {{userData.device}}
-- Marca: {{userData.brand}}
-- IP: {{ipCliente}}
-- Mac Address: {{macCliente}}
+- Dispositivo: ${userData.device}
+- Marca: ${userData.brand}
+- Dirección IP: ${ipCliente}
+- Dirección MAC: ${macCliente}
 - Nombre del dispositivo: 
 
-Información adicional: 
+Además, te proporcionamos información adicional:
 
-- Agente de usuario: {{userData.ua}}
-- Navegador: {{userData.browser.name}}
-- Versión del navegador: {{userData.browser.version}}
-- CPU: {{userData.cpu.architecture}}
-- Motor de renderizado: {{userData.engine.name}}
-- Sistema operativo: {{userData.os.name}}
+- Agente de usuario: ${userData.ua}
+- Navegador: ${userData.browser.name}
+- Versión del navegador: ${userData.browser.version}
+- CPU: ${userData.cpu.architecture}
+- Motor de renderizado: ${userData.engine.name}
+- Sistema operativo: ${userData.os.name}
 
-Este usuario es: {{isFirstTime ? 'Su primer inicio' : 'Un usuario recurrente'}}
+Este usuario ${isFirstTime ? 'es su primer inicio' : 'ya ha visitado antes'}.
 
-El usuario ha cambiado de identidad: {{getIdentityChanges() > 0 ? 'Sí' : 'No'}}
-El usuario ha cambiado: {{getIdentityChanges()}} veces
-
-¡Gracias por utilizar nuestros servicios!`);
+${isFirstTime ? 'El usuario ha cambiado de identidad: No' : 'El usuario ha cambiado de identidad: Sí'}
+${isFirstTime ? 'El usuario ha cambiado: 0 veces' : `El usuario ha cambiado: ${getIdentityChanges()} veces`}
+`);
   }
 
   // Actualizar la cantidad de veces que el usuario ha cambiado de identidad
