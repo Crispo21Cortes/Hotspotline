@@ -1,0 +1,270 @@
+.pricingTable{
+    text-align: center;
+    transition: all 0.5s ease 0s;
+	border-radius: .25rem;
+	margin-top: .25rem;
+	margin-bottom: .35rem;
+}
+.pricingTable:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.pricingTable .pricingTable-header{
+    color: #feffff;
+	border-radius: .25rem .25rem 0 0;
+	border-bottom: 10px solid;
+}
+.pricingTable .heading{
+    display: block;
+    padding-top: 25px;
+}
+.pricingTable .heading > h3{
+    font-size: 20px;
+    margin: 0;
+    text-transform: capitalize;
+}
+.pricingTable .subtitle{
+    display: block;
+    font-size: 13px;
+    margin-top: 5px;
+    text-transform: capitalize;
+}
+.pricingTable .price-value{
+    display: block;
+    font-size: 64px;
+    font-weight: 700;
+    padding-bottom: 25px;
+}
+.pricingTable .price-value span{
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+.pricingTable .pricingContent{
+    text-transform: capitalize;
+    background: #fbfbfb;
+	border-radius: 0 0 .25rem .25rem;
+}
+.pricingTable .pricingContent ul{
+    list-style: none;
+    padding: 15px 20px 10px;
+    margin: 0;
+    text-align: left;
+}
+.pricingTable .pricingContent ul li{
+    font-size: 14px;
+    padding: 12px 0;
+    border-bottom: 1px dashed #e1e1e1;
+    /*color: #9da1ad;*/
+}
+.pricingTable .pricingContent ul li i{
+    font-size: 14px;
+    float: right;
+}
+.pricingTable .pricingTable-sign-up{
+    padding: 20px 0;
+    background: #fbfbfb;
+    color: #fff;
+    text-transform: capitalize;
+}
+.pricingTable .btn-block{
+    width: 60%;
+    margin: 0 auto;
+    font-size: 17px;
+    color: #fff;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.5s ease 0s;
+}
+.pricingTable .btn-block:before{
+    font-family: "Font Awesome 5 Free"; font-weight: 900;
+    margin-right: 10px;
+}
+/*Default*/
+.pricingTable .pricingTable-header,
+.pricingTable .btn-block{
+    background: #43A047;
+	border-bottom: 10px solid #1B5E20;	
+}
+.pricingTable .pricingContent{
+	background: #C8E6C9;	
+}
+/*Red*/
+.pricingTable.red .pricingTable-header,
+.pricingTable.red .btn-block{
+    background: #e53935;
+	border-bottom: 10px solid #b71c1c
+}
+.pricingTable.red .pricingContent{
+	background: #ffcdd2;	
+}
+/*Pink*/
+.pricingTable.pink .pricingTable-header,
+.pricingTable.pink .btn-block{
+    background: #D81B60;
+	border-bottom: 10px solid #880E4F
+}
+.pricingTable.pink .pricingContent{
+	background: #F8BBD0;	
+}
+/*Purple*/
+.pricingTable.purple .pricingTable-header,
+.pricingTable.purple .btn-block{
+    background: #8E24AA;
+	border-bottom: 10px solid #4A148C
+}
+.pricingTable.purple .pricingContent{
+	background: #E1BEE7;	
+}
+/*Deep Purple*/
+.pricingTable.deep-purple .pricingTable-header,
+.pricingTable.deep-purple .btn-block{
+    background: #5E35B1;
+	border-bottom: 10px solid #311B92
+}
+.pricingTable.deep-purple .pricingContent{
+	background: #D1C4E9;	
+}
+/*Indigo*/
+.pricingTable.indigo .pricingTable-header,
+.pricingTable.indigo .btn-block{
+    background: #3949AB;
+	border-bottom: 10px solid #1A237E
+}
+.pricingTable.indigo .pricingContent{
+	background: #C5CAE9;	
+}
+/*Blue*/
+.pricingTable.blue .pricingTable-header,
+.pricingTable.blue .btn-block{
+    background: #1E88E5;
+	border-bottom: 10px solid #0D47A1
+}
+.pricingTable.blue .pricingContent{
+	background: #BBDEFB;	
+}
+/*Light Blue*/
+.pricingTable.light-blue .pricingTable-header,
+.pricingTable.light-blue .btn-block{
+    background: #039BE5;
+	border-bottom: 10px solid #01579B
+}
+.pricingTable.light-blue .pricingContent{
+	background: #B3E5FC;	
+}
+/*Cyan*/
+.pricingTable.cyan .pricingTable-header,
+.pricingTable.cyan .btn-block{
+    background: #00ACC1;
+	border-bottom: 10px solid #006064
+}
+.pricingTable.cyan .pricingContent{
+	background: #B2EBF2;	
+}
+/*Teal*/
+.pricingTable.teal .pricingTable-header,
+.pricingTable.teal .btn-block{
+    background: #00897B;
+	border-bottom: 10px solid #004D40
+}
+.pricingTable.teal .pricingContent{
+	background: #B2DFDB;	
+}
+/*Light Green*/
+.pricingTable.light-green .pricingTable-header,
+.pricingTable.light-green .btn-block{
+    background: #558B2F;
+	border-bottom: 10px solid #33691E
+}
+.pricingTable.light-green .pricingContent{
+	background: #DCEDC8;	
+}
+/*Lime*/
+.pricingTable.lime .pricingTable-header,
+.pricingTable.lime .btn-block{
+    background: #C0CA33;
+	border-bottom: 10px solid #827717
+	color: black
+}
+.pricingTable.lime .pricingContent{
+	background: #F0F4C3;	
+}
+/*Yellow*/
+.pricingTable.yellow .pricingTable-header,
+.pricingTable.yellow .btn-block{
+    background: #FDD835;
+	border-bottom: 10px solid #F9A825;
+	color: black;
+}
+.pricingTable.yellow .pricingContent{
+	background: #FFF9C4;
+}
+/*Amber*/
+.pricingTable.amber .pricingTable-header,
+.pricingTable.amber .btn-block{
+    background: #FFB300;
+	border-bottom: 10px solid #FF6F00
+	color: black;
+}
+.pricingTable.amber .pricingContent{
+	background: #FFECB3;
+}
+/*Orange*/
+.pricingTable.orange .pricingTable-header,
+.pricingTable.orange .btn-block{
+    background: #e67e22;
+	border-bottom: 10px solid #E65100
+}
+.pricingTable.orange .pricingContent{
+	background: #FFE0B2	;	
+}
+/*Deep Orange*/
+.pricingTable.deep-orange .pricingTable-header,
+.pricingTable.deep-orange .btn-block{
+    background: #F4511E;
+	border-bottom: 10px solid #BF360C
+}
+.pricingTable.deep-orange .pricingContent{
+	background: #FFAB91;	
+}
+/*Brown*/
+.pricingTable.brown .pricingTable-header,
+.pricingTable.brown .btn-block{
+    background: #6D4C41;
+	border-bottom: 10px solid #3E2723
+}
+.pricingTable.brown .pricingContent{
+	background: #D7CCC8;	
+}
+/*Grey*/
+.pricingTable.grey .pricingTable-header,
+.pricingTable.grey .btn-block{
+    background: #424242;
+	border-bottom: 10px solid #212121
+}
+.pricingTable.grey .pricingContent{
+	background: #BDBDBD;	
+}
+/*Blue Grey*/
+.pricingTable.blue-grey .pricingTable-header,
+.pricingTable.blue-grey .btn-block{
+    background: #546E7A;
+	border-bottom: 10px solid #263238
+}
+.pricingTable.blue-grey .pricingContent{
+	background: #CFD8DC;	
+}
+
+
+.pricingTable.blue .btn-block:hover,
+.pricingTable.pink .btn-block:hover,
+.pricingTable.orange .btn-block:hover,
+.pricingTable.green .btn-block:hover{
+    background: #e6e6e6;
+    color: #939393;
+}
+@media screen and (max-width: 990px){
+    .pricingTable{ margin-bottom: 20px; }
+}
