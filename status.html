@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/cyberalonso.css">
+	<link rel="stylesheet" href="css/tablas-precios.css">
+	<meta name="theme-color" content="#2E7D32">
+	<title>WORLD WIFI</title>
+	$(if refresh-timeout)
+<meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+$(endif)
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="-1">
+<!--Script Hotspot-->
+<script language="JavaScript">
+<!--
+$(if advert-pending == 'yes')
+    var popup = '';
+    function focusAdvert() {
+	if (window.focus) popup.focus();
+    }
+    function openAdvert() {
+	popup = open('$(link-advert)', 'hotspot_advert', '');
+	setTimeout("focusAdvert()", 1000);
+    }
+$(endif)
+    function openLogout() {
+	if (window.name != 'hotspot_status') return true;
+        open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+	window.close();
+	return false;
+    }
+//-->
+</script>
+<!--/Script Hotspot-->
+</head>
+<body
+$(if advert-pending == 'yes')
+	onLoad="openAdvert()"
+$(endif)
+>
+
+
+
+
+
+
+	<!--Barra de Navegacion-->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-main fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="."><img src="http://wcn.com.mx/img/logo.png" alt="" width="130" class="img-fluid rounded-circle"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link active" href=".">
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="login.html"><i class="fa fa-home"></i> Inicio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contacto.html"><i class="fa fa-id-card"></i> Contacto</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+	<!--/Barra de Navegacion-->
+	<!--Header-->
+	<header>
+		<div class="layer-color">
+			<div class="container py-2">
+				<div class="row">
+					<div class="col-12">
+						<div class="row">
+							<div class="col-12  col-sm-9 col-md-6 col-lg-3">
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--/Header-->
+	<main>
+		<section id="LoginForm">
+			<div class="container">
+				<div class="row">
+					<!--logins-->
+					<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-xl-6 offset-xl-3 py-3">
+						$(if login-by == 'trial')
+						<h4 class="text-center">Conectado con internet gratis</h4>
+						<p class="lead text-center">Estas Conectado con Internet gratis patrocinado por nuestros anunciantes.</p>
+						$(elif login-by != 'mac')
+						<h4 class="text-center">Ficha $(username)</h4>
+						<p class="lead text-center">Bienvenido, gracias por usar nuestro Servicios de Internet.</p>
+						$(endif)
+						<table class="table table-striped table-bordered table-hover table-responsive">
+							<thead>
+								<tr>
+									<th>Dirección IP:</th>
+									<th>Dirección MAC:</th>
+									<th>Tiempo Conectado:</th>
+									<th>Datos Consumidos Sub/Desc:</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>$(ip)</th>
+									<th>$(mac)</th>
+									<th>$(uptime)</th>
+									<th>$(bytes-in-nice) / $(bytes-out-nice)</th>
+								</tr>
+							</tbody>
+						</table>
+						<form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+							<p class="text-center"><button class="btn btn-danger btn-lg">Desconectar el Internet</button></p>
+						</form>
+
+
+					</div>
+					<!--/logins-->
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container py-4">
+				<div class="row">
+					<!--card--->
+					<div class="col-12 mx-auto">
+						<h2 class="text-center"><i class="fa fa-info-circle fa-2x left"></i> Información</h2>
+						<p>&nbsp;</p>
+						<p class="lead">Con acceso a internet gratuito, tendras que iniciar sesión cada 30 minutos.</p>
+					</div>
+					<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+						<div class="pricingTable light-green">
+							<div class="pricingTable-header">
+								<span class="heading">
+                                    
+                        <h3>PLAN 1</h3>
+								</span>
+								<span class="price-value">$5 <span> 1 Hora</span></span>
+							</div>							
+						</div>
+					</div>
+<!--/card-->
+					<!--card--->
+					<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+						<div class="pricingTable blue-grey">
+							<div class="pricingTable-header">
+								<span class="heading">
+                        <h3>PLAN 2</h3>
+								</span>
+								<span class="price-value">$10 <span>4 Horas</span></span>
+							</div>
+							<div class="pricingContent">
+<ul>
+									<li>MAS VENDIDO<i class="fa fa-check"></i></li>
+								</ul>								
+							</div>
+						</div>
+					</div>
+                    
+
+                    
+			
+					<!--/card-->
+					<!--card--->
+					<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+						<div class="pricingTable orange">
+							<div class="pricingTable-header">
+								<span class="heading">
+                        <h3>PLAN 3</h3>
+								</span>
+								<span class="price-value">$20 <span>4 Dias</span></span>
+							</div>
+							<div class="pricingContent">								
+							</div>
+						</div>
+					</div>
+                    
+					<!--/card-->
+					<!--card--->
+					<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+						<div class="pricingTable yellow">
+							<div class="pricingTable-header">
+								<span class="heading">
+                        <h3>PLAN 4</h3>
+								</span>
+								<span class="price-value">$35 <span>8 Días</span></span>
+							</div>
+							<div class="pricingContent">
+								<ul>
+									<li>MAS VENDIDO<i class="fa fa-check"></i></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+<!--/card-->
+					<!--card--->
+					<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+						<div class="pricingTable orange">
+							<div class="pricingTable-header">
+								<span class="heading">
+                        <h3>PLAN 5</h3>
+								</span>
+								<span class="price-value">$60 <span>15 Días</span></span>
+							</div>
+							<div class="pricingContent">								
+							</div>
+						</div>
+					</div>
+                    
+                    
+                    <!--/card-->
+					<!--card--->
+					<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+						<div class="pricingTable blue">
+							<div class="pricingTable-header">
+								<span class="heading">
+                        <h3>PLAN 6</h3>
+								</span>
+								<span class="price-value">$100 <span>30 Dias</span></span>
+							</div>
+							<div class="pricingContent">
+								
+							</div>
+                        			
+						</div>
+					</div>      					
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="container">
+			<div class="copy text-center">
+				<p>¡WORLD CONNECTION NETWORK 2016!</p>
+				<p>COSCOMATPEC DE BRAVO, VERACRUZ</p>
+			</div>
+		</div>
+	</footer>
+	<!-- PopUp -->
+	<div class="modal fade" id="PopUP" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">ANUNCIOS WORLD CONNECTION</h5>
+
+				</div>
+				<div class="modal-body">
+					<div id="popUp-load">
+					</div>
+				</div>
+
+				<button type="button" class="close btn-circle" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+		</div>
+	</div>
+	<!--/PopUp-->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.bootstrap-autohidingnavbar.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$(".fixed-top").autoHidingNavbar()
+		});
+	</script>
+	<script>
+		// PopUp Random
+		var images = ['prom1.jpg', 'pom2.jpg'];
+		var randomimg = images[Math.floor(Math.random() * images.length)];
+		$('<img class="img-fluid" src="http://wcn.com.mx/images/' + randomimg + '">').appendTo('#popUp-load');
+		var rand = Math.round(Math.random() * (5000 - 300)) + 500;
+		// PopUp Random
+
+		$(document).ready(function() {
+			setTimeout(function() {
+				$('#PopUP').modal(open)
+			}, rand);
+
+		});
+	</script>
+</body>
+
+</html>

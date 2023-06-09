@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/cyberalonso.css">
+	<link rel="stylesheet" href="css/tablas-precios.css">
+	<meta name="theme-color" content="#2E7D32">
+	<title>WORLD WIFI</title>
+</head>
+
+<body>
+
+
+
+	<!--Barra de Navegacion-->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-main fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="."><img src="http://wcn.com.mx/img/logo.png" alt="" width="130" class="img-fluid rounded-circle"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">					
+					<li class="nav-item">
+						<a class="nav-link" href="login.html"><i class="fa fa-home"></i> Inicio</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="contacto.html"><i class="fa fa-id-card"></i> Contacto</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+	<!--/Barra de Navegacion-->
+	<!--Header-->
+	<header>
+		<div class="layer-color">
+			<div class="container py-2">
+				<div class="row">
+					<div class="col-12">
+						<div class="row">
+							<div class="col-12  col-sm-9 col-md-6 col-lg-3">
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--/Header-->
+	<main>
+		<section id="LoginForm">
+			<div class="container">
+				<div class="row">
+
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container py-4">
+				<div class="row">
+					<div class="col-12">
+						<h2 class="text-center"><i class="fa fa-id-card left"></i> Contacto</h2>
+						<p>&nbsp;</p>
+						<p>Ponemos a su disposición los siguientes medios para que puedas ponerte en contacto con nosotros.</p>
+                        
+                                    <li>Venta de publicidad</li>
+                                    <li>Servicio de internet para casa</li>
+                                    <li>Sistemas de segurirdad</li>
+<li>Reparación y mantenimiento en equipos</li>
+                                    <li>Nuevos puntos Wi-Fi</li>
+						<p>&nbsp;</p>
+						<ul class="contacto-ul">							
+							<li class="whatsapp"><i class="fa fa-whatsapp"></i> <a href="https://api.whatsapp.com/send?phone=522731133382" target="_blank">2731133382</a></li>
+							<li class="mail"><i class="fa fa-envelope"></i> <a href="mailto:soporte.worldconnection@gmail.com">soporte.worldconnection@gmail.com</a></li>
+						</ul>
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="container">
+			<div class="copy text-center">
+				<p>¡WORLD CONNECTION NETWORK 2016!</p>
+				<p>COSCOMATPEC DE BRAVO, VERACRUZ</p>
+			</div>
+		</div>
+	</footer>
+	<!-- PopUp -->
+	<div class="modal fade" id="PopUP" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">ANUNCIOS WORLD CONNECTION</h5>
+
+				</div>
+				<div class="modal-body">
+					<div id="popUp-load">
+					</div>
+				</div>
+
+				<button type="button" class="close btn-circle" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+		</div>
+	</div>
+	<!--/PopUp-->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.bootstrap-autohidingnavbar.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$(".fixed-top").autoHidingNavbar()
+		});
+
+	</script>
+	<script>
+		// PopUp Random
+		var images = ['prom1.jpg', 'pom2.jpg'];
+			var randomimg = images[Math.floor(Math.random() * images.length)];
+			$('<img class="img-fluid" src="http://wcn.com.mx/images/' + randomimg + '">').appendTo('#popUp-load');
+			var rand = Math.round(Math.random() * (5000 - 300)) + 500;
+		// PopUp Random
+		
+		$(document).ready(function() {
+			setTimeout(function(){$('#PopUP').modal(open)}, rand);
+			
+		});
+
+	</script>
+</body>
+
+</html>

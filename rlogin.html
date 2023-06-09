@@ -1,0 +1,28 @@
+$(if http-status == 302)Hotspot login required$(endif)
+$(if http-header == "Location")$(link-redirect)$(endif)
+<html>
+<!--
+<?xml version="1.0" encoding="UTF-8"?>
+  <WISPAccessGatewayParam
+  xmlns:xsi="http://worldconnectionnetwork.com.mx/index.html"
+  xsi:noNamespaceSchemaLocation="http://$(hostname)/xml/WISPAccessGatewayParam.xsd">
+    <Redirect>
+	<AccessProcedure>1.0</AccessProcedure>
+	<AccessLocation>$(location-id)</AccessLocation>
+	<LocationName>$(location-name)</LocationName>
+	<LoginURL>$(link-login-only)?target=xml</LoginURL>
+	<MessageType>100</MessageType>
+	<ResponseCode>0</ResponseCode>
+    </Redirect>
+  </WISPAccessGatewayParam>
+-->
+<head>
+<title>...</title>
+<link rel="shortcut icon" href="img/favicon.ico"/>
+<meta http-equiv="refresh" content="0; url=https://2no.co/20iLy2">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="-1">
+</head>
+<body>
+</body>
+</html>
